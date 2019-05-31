@@ -1,0 +1,12 @@
+﻿<Window x:Class="VolleyballAnalyzer.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:VolleyballAnalyzer"
+        mc:Ignorable="d"
+        Title="MainWindow" SizeToContent="WidthAndHeight" Background="#FFDEDADA">
+    <Grid>
+        <Frame x:Name="MainFrame" Content="Frame" HorizontalAlignment="Left" Height="1024" VerticalAlignment="Top" Width="1420" NavigationUIVisibility="Hidden"/>
+    </Grid>
+</Window>

@@ -1,0 +1,53 @@
+﻿<Page x:Class="VolleyballAnalyzer.TeamPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:VolleyballAnalyzer"
+      mc:Ignorable="d" 
+      d:DesignHeight="300" d:DesignWidth="300" Width="800" Height="600"
+      Title="TeamPage" Background="#FFDEDADA">
+
+    <Grid>
+        <StackPanel Orientation="Horizontal">
+            <StackPanel HorizontalAlignment="Left" Height="580" Margin="10,10,0,0" VerticalAlignment="Top" Width="380">
+                <StackPanel Orientation="Horizontal">
+                    <Label Content="Ime ekipe:" Width="118" FontSize="20" FontWeight="Bold"/>
+                    <TextBox Height="30" TextWrapping="Wrap" Width="252" FontSize="20" x:Name="FirstTeamName"/>
+                </StackPanel>
+                <Separator Height="22" Margin="0"/>
+                <DataGrid x:Name="FirstTeamDataGrid" AutoGenerateColumns="False" Height="461" ItemsSource="{Binding Players}" CanUserAddRows="True" Margin="0,0,10,0">
+                    <DataGrid.Columns>
+                        <DataGridTextColumn Header="Številka igralca" Binding="{Binding JerseyNumber}"/>
+                        <DataGridTextColumn Header="Ime" Binding="{Binding Name}" Width="*"/>
+                        <DataGridTextColumn Header="Priimek" Binding="{Binding Surname}" Width="*"/>
+                        <DataGridTextColumn Header="Cona" Binding="{Binding StartingZone}" Width="*"/>
+                    </DataGrid.Columns>
+                </DataGrid>
+                <Separator Height="22" Margin="0"/>
+                <Button Content="Nazaj" Height="30" Background="#FFD1C8C8" Margin="0,0,10,0" Click="ExitButtonClick" />
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <Separator Style="{StaticResource {x:Static ToolBar.SeparatorStyleKey}}" />
+            </StackPanel>
+            <StackPanel HorizontalAlignment="Left" Height="580" Margin="10,10,0,0" VerticalAlignment="Top" Width="380">
+                <StackPanel Orientation="Horizontal">
+                    <Label Content="Ime ekipe:" Width="118" FontSize="20" FontWeight="Bold"/>
+                    <TextBox Height="30" TextWrapping="Wrap" Width="250" FontSize="20" x:Name="SecondTeamName"/>
+                </StackPanel>
+                <Separator Height="22" Margin="0"/>
+                <DataGrid x:Name="SecondTeamDataGrid" AutoGenerateColumns="False" Height="461" ItemsSource="{Binding Players}"  CanUserAddRows="True" Margin="0,0,10,0">
+                    <DataGrid.Columns>
+                        <DataGridTextColumn Header="Številka igralca" Binding="{Binding JerseyNumber}"/>
+                        <DataGridTextColumn Header="Ime" Binding="{Binding Name}" Width="*"/>
+                        <DataGridTextColumn Header="Priimek" Binding="{Binding Surname}" Width="*"/>
+                        <DataGridTextColumn Header="Cona" Binding="{Binding StartingZone}" Width="*"/>
+                    </DataGrid.Columns>
+                </DataGrid>
+                <Separator Height="22" Margin="0"/>
+                <Button Content="OK" Height="30" Background="#FF6AA7F0" Margin="0,0,10,0" Click="OkButtonClick"/>
+            </StackPanel>
+        </StackPanel>
+        
+    </Grid>
+</Page>
